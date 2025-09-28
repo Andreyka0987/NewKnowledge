@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="425.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.petprohect_1.Controller">
+   <children>
+      <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Головне меню" />
+          <MenuItem mnemonicParsing="false" text="Електронний щоденник" />
+          <MenuItem mnemonicParsing="false" text="Повідомлення" />
+            <MenuItem mnemonicParsing="false" text="Оцінки" />
+        </items>
+      </MenuButton>
+      <ImageView fitHeight="103.0" fitWidth="109.0" layoutX="502.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
