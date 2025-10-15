@@ -35,7 +35,7 @@ public class Controller{
               loginCheckIsCorrect.checkIfUserWantToRememberHim(loginBar.getText(),passwordBar.getText(),true);
           }
           if (!rememberMeButton.isSelected()){
-              loginCheckIsCorrect.checkIfUserWantToRememberHim(loginBar.getText(),"",false);
+              loginCheckIsCorrect.checkIfUserWantToRememberHim("","",false);
           }
 
 

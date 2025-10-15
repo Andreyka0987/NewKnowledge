@@ -7,7 +7,7 @@ public class MainWindowLogic {
 
     private static final String dataBaseURL = "jdbc:mysql://localhost:3306/userinfo";
     private static final String dataBaseUSER = "root";
-    private static final String dataBasePassword = "";
+    private static final String dataBasePassword = "password";
 
 
 

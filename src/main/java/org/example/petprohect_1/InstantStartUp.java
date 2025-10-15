@@ -8,5 +8,6 @@ import java.io.IOException;
 public interface InstantStartUp {
 
     void instantLogin(TextField login, TextField password, RadioButton radioButton) throws IOException;
+    void fileHooker();
 
 }

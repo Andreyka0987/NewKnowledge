@@ -22,6 +22,10 @@ public class LoginCheckIsCorrect implements InstantStartUp{
         Connection connection = null;
         Statement statement = null;
 
+
+        System.out.println(login);
+        System.out.println(inputPassword);
+
         try {
             connection = DriverManager.getConnection(dataBaseURL,dataBaseUser,dataBasePassword);
 
@@ -34,6 +38,8 @@ public class LoginCheckIsCorrect implements InstantStartUp{
                 String inBaseLogin = resultSet.getString("login");
                 String inBasePassword = resultSet.getString("password");
 
+
+
                 if (inBaseLogin.equals(login)){
                     if (inBasePassword.equals(inputPassword)){
                         System.out.println("Welcome!");
@@ -41,12 +47,11 @@ public class LoginCheckIsCorrect implements InstantStartUp{
                     }
                     else {
                         System.out.println("Something wrong with password!");
-                        return false;
+
                     }
                 }
                 else {
                     System.out.println("SomeThing wrong with login");
-                    return false;
                 }
             }
 
@@ -134,6 +139,7 @@ public class LoginCheckIsCorrect implements InstantStartUp{
                 password.setText(passwordRead.substring(6));
             }else {
                 radioButton.setSelected(false);
+
             }
 
 
@@ -144,5 +150,16 @@ public class LoginCheckIsCorrect implements InstantStartUp{
         }
 
 
+    }
+
+    @Override
+    public void fileHooker() {
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                File file = new File("src/main/java/org/example/petprohect_1/cookies/HardKey.txt");
+                if (file.exists())file.delete();
+            }
+        }));
     }
 }

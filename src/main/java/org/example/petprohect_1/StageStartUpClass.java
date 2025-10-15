@@ -6,12 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class StageStartUpClass extends Application implements ToStartNewStageInterface {
 
     public static Controller controller;
-    InstantStartUp instantStartUp = new LoginCheckIsCorrect();
+    public static InstantStartUp instantStartUp = new LoginCheckIsCorrect();
 
     ToStartNewStageInterface toStartNewStageInterface;
     public static final String USER_PROFILE_FXML = "user-profile.fxml";
@@ -23,11 +24,12 @@ public class StageStartUpClass extends Application implements ToStartNewStageInt
         startUpFunc(stage,LOGIN_MENU_FXML);
         instantStartUp.instantLogin(controller.loginBar,controller.passwordBar,controller.rememberMeButton);
 
-
     }
 
     public static void main(String[] args) {
         launch();
+        instantStartUp.fileHooker();
+
     }
 
 
@@ -39,7 +41,6 @@ public class StageStartUpClass extends Application implements ToStartNewStageInt
         stage.setTitle("");
         stage.setScene(scene);
         stage.show();
-
     }
 
 
@@ -51,6 +52,9 @@ public class StageStartUpClass extends Application implements ToStartNewStageInt
         stage.setScene(scene);
         stage.show();
     }
+
+
+
 
 
 
